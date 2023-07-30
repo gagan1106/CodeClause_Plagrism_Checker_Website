@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plagiarism Checker</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+    <h1>Plagiarism Checker</h1>
+    <form action="/check" method="POST" enctype="multipart/form-data">
+        <input type="file" name="document">
+        <button type="submit">Check Plagiarism</button>
+    </form>
+    <div id="result">
+        {% if plagiarism_result %}
+        <h2>Plagiarism Report:</h2>
+        <p>{{ plagiarism_result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
